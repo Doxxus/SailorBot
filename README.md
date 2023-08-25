@@ -1,4 +1,4 @@
-## A small discord bot to remind you of the joys of capitalism.
+### A small discord bot to remind you of the joys of capitalism.
 
 # Installation Instructions
 
