@@ -11,4 +11,4 @@
 ```
 5. Type ```node ./dist/index.js``` this will start running the bot.
 
-### You can now interact with **SailorBot***
+### You can now interact with **SailorBot**
