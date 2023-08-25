@@ -2,3 +2,5 @@
 node_modules
 /build
 /package
+.dev.env
+.env
