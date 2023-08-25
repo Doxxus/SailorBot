@@ -2,5 +2,6 @@
 node_modules
 /build
 /package
+dist
 .dev.env
 .env
