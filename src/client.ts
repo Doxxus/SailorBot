@@ -34,7 +34,10 @@ client.once('ready', () => {
             let channel = guild.systemChannel;
             
             if (channel !== undefined && channel !== null) {
-                channel.send({ files: [{ attachment: './static/monday.jpg' }]});
+                channel.send({
+                    content: "@everyone", 
+                    files: [{ attachment: './static/monday.jpg' 
+                }]});
             }
         });
     });
@@ -44,7 +47,10 @@ client.once('ready', () => {
             let channel = guild.systemChannel;
             
             if (channel !== undefined && channel !== null) {
-                channel.send({ files: [{ attachment: `./static/friday_${random_int(1, 4)}.jpg` }]});
+                channel.send({ 
+                    content: "@everyone",
+                    files: [{ attachment: `./static/friday_${random_int(1, 4)}.jpg` 
+                }]});
             }
         });
     });

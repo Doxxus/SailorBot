@@ -3,14 +3,34 @@ import { event, Events, random_int } from '../utils/index.js';
 export default event(Events.MessageCreate, ({ log }, message ) => {    
     if (message.content === '!monday') {
         log(`Incoming message from ${message.guild}: ${message}.`);
-        return message.channel.send({ files: [{ attachment: './static/monday.jpg' }]});
+
+        const is_monday = (d = new Date()) => d.getDay() === 1;
+
+        if (is_monday()) {
+            return message.channel.send({ 
+                content: `${message.author}`, 
+                files: [{ attachment: './static/monday.jpg' 
+            }]});
+        }
+        else {
+            return message.reply(`${message.author} It be not Monday yet sailor.`);
+        }     
     }
     else if (message.content === '!friday') {
         log(`Incoming message from ${message.guild}: ${message}.`);
-        let num = random_int(1, 4);
-        log(num);
+    
+        const is_friday = (d = new Date()) => d.getDay() === 5;
 
-        return message.channel.send({ files: [{ attachment: `./static/friday_${num}.jpg` }]});
+        if (is_friday()) {
+            let num = random_int(1, 4);
+            return message.channel.send({ 
+                content: `${message.author}`,
+                files: [{ attachment: `./static/friday_${num}.jpg` 
+            }]});
+        }
+        else {
+            return message.reply(`${message.author} It be not Friday yet sailor.`);
+        }      
     }
     // else if (message.content === '!setchannel') {
     //     log(`Incoming message from ${message.guild}: ${message}.`);
