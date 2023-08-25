@@ -1,6 +1,6 @@
-##A small discord bot to remind you of the joys of capitalism.
+## A small discord bot to remind you of the joys of capitalism.
 
-#installation instructions
+# Installation Instructions
 
 1. in the installation directory open a terminal (or WS Powershell).
 2. Type ```npm install```, this will install all of the dependencies.
