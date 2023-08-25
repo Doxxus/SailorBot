@@ -1,1 +1,1 @@
-placeholder text
+A small discord bot to remind you of the joys of capitalism.
